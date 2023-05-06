@@ -10,20 +10,40 @@ export function Home () {
 
 	return (
 		<div className="traffic-light">
+			<p>This is a color: {selectedColor}</p>
 			<div 
-			onClick={() => selectedColor ("red") }
+			onClick={() => setSelectedColor("red") }
 			className={
-				"light red" + (selectedColor === "red") ? "glow" : ""}></div>
+				 (selectedColor === "red") ? "glow light red" : "light red"}></div>
+				 <div 
+			onClick={() => setSelectedColor("yellow")}
+			className={
+				 (selectedColor ==="yellow") ? "glow light yellow" : "light yellow"}></div>
 			<div 
-			onClick={() => selectedColor ("yellow")}
+			onClick={() => setSelectedColor("green")}
 			className={
-				"light yellow" + (selectedColor ==="yellow") ? "glow" : ""}></div>
-			<div 
-			onClick={() => selectedColor ("green")}
-			className={
-				"light green" + (selectedColor === "green") ? "glow" : ""}></div>
-			
+				(selectedColor === "green") ? "glow light green" : "light green"}></div>
+
+
+
+
 		</div>
+		// <div className="traffic-light">
+		// 	<p>This is a color: {selectedColor}</p>
+		// 	<div 
+		// 	onClick={() => setSelectedColor("red") }
+		// 	className={
+		// 		"light red" + (selectedColor === "red") ? "glow" : ""}></div>
+		// 	<div 
+		// 	onClick={() => setSelectedColor("yellow")}
+		// 	className={
+		// 		"light yellow" + (selectedColor ==="yellow") ? "glow" : ""}></div>
+		// 	<div 
+		// 	onClick={() => setSelectedColor("green")}
+		// 	className={
+		// 		"light green" + (selectedColor === "green") ? "glow" : ""}></div>
+			
+		// </div>
 	);
 };
 
